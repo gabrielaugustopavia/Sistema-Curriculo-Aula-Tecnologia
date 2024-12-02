@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Curriculo Simples</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sistema de Currículos</h1>
+      <button id="add-profile-btn">+ Novo Currículo</button>
+    </header>
+
+    <!-- Lista de Perfis -->
+    <section id="profiles-list" class="profiles-list"></section>
+
+    <!-- Formulário para Criar/Editar Currículo -->
+    <section id="form-section" class="hidden">
+      <h2 id="form-title">Criar Currículo</h2>
+      <form id="profile-form">
+        <input type="text" id="name" placeholder="Nome" required />
+        <input type="text" id="email" placeholder="Email" required />
+        <textarea id="experience" placeholder="Experiência" rows="4" required></textarea>
+        <textarea id="skills" placeholder="Habilidades" rows="3" required></textarea>
+        <button type="submit">Salvar</button>
+        <button type="button" id="cancel-btn">Cancelar</button>
+      </form>
+    </section>
+
+    <!-- Visualizador do Currículo -->
+    <section id="preview-section" class="hidden">
+      <h2>Visualizar Currículo</h2>
+      <div class="preview-card">
+        <p><strong>Nome:</strong> <span id="preview-name"></span></p>
+        <p><strong>Email:</strong> <span id="preview-email"></span></p>
+        <p><strong>Experiência:</strong> <span id="preview-experience"></span></p>
+        <p><strong>Habilidades:</strong> <span id="preview-skills"></span></p>
+      </div>
+      <button id="edit-btn">Editar</button>
+      <button id="download-pdf-btn">Baixar PDF</button>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
